@@ -5,7 +5,7 @@ const ViewAttendance = () => {
   const [attendances, setAttendances] = useState([]);
 
   const fetchData = () => {
-    fetch(`http://localhost:5000/api/attendance?date=${date}`)
+    fetch(`https://scsit-backend.onrender.com/api/attendance?date=${date}`)
       .then(res => res.json())
       .then(data => setAttendances(data));
   };

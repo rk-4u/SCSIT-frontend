@@ -15,7 +15,7 @@ const AttendanceForm = () => {
   const [attendances, setAttendances] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/students')
+    fetch('https://scsit-backend.onrender.com/api/students')
       .then(res => res.json())
       .then(data => {
         setStudents(data);
@@ -30,7 +30,7 @@ const AttendanceForm = () => {
   };
 
   const submit = () => {
-    fetch('http://localhost:5000/api/attendance', {
+    fetch('https://scsit-backend.onrender.com/api/attendance', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ date, subject, attendances }),
