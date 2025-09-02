@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const subjects = [
   'Data Structures using C++',
+  'Data Structures using C++ [ LAB ]',
   'Operating Systems',
+  'Operating Systems [ LAB ]',
   'Computer Organization and Architecture',
+  'Computer Organization and Architecture [ LAB ]',
   'Mathematical Foundation for Computer Applications',
   'Communication Skills and Report Writing',
 ];
