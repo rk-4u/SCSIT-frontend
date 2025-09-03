@@ -22,7 +22,7 @@ const AttendanceForm = () => {
       .then(res => res.json())
       .then(data => {
         setStudents(data);
-        setAttendances(data.map(s => ({ student: s._id, present: true }))); // Default to present
+        setAttendances(data.map(s => ({ student: s._id, present: false }))); // Default to present
       });
   }, []);
 
@@ -68,7 +68,7 @@ const AttendanceForm = () => {
           ))}
         </select>
       </div>
-      <ul className="w-full max-w-md overflow-y-auto max-h-96">
+      <ul className="w-full max-w-md overflow-y-auto ">
         {students.map((s, i) => (
           <li key={s._id} className="flex justify-between items-center mb-2 p-2 border rounded">
             <span className="text-sm">{s.rollNo}. {s.name}</span>
